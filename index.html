@@ -552,6 +552,11 @@ const CONFIG = {
       year: "2026",
       desc: "Sistem telemedicine skrining risiko diabetes melitus berbasis Flask dan SQLite dengan integrasi 3 algoritma Machine Learning (Naive Bayes, Decision Tree, SVM) serta fitur telekonsultasi dokter.",
       tags: ["Python", "Flask", "Machine Learning", "Telemedicine", "SQLite"],
+      zip: "TeleDiabetes",
+      zipSize: "840 KB",
+      runFile: "Jalankan_Aplikasi_TeleDiabetes.bat",
+      runCmd: "python app.py",
+      runNote: "Buka browser ke <code>http://127.0.0.1:5000</code>. Akun dokter bawaan: <code>dokter@demo.id</code> / <code>dokter123</code>.",
       demo: "https://pramboos.pythonanywhere.com",
       repo: "",
       image: ""
@@ -657,7 +662,8 @@ const CONFIG = {
             <li>Pasang Python 3.10 atau lebih baru.</li>
             <li>Ekstrak file ZIP, lalu buka folder hasil ekstraknya di terminal.</li>
             <li>Jalankan <code>pip install -r requirements.txt</code></li>
-            <li>Jalankan <code>streamlit run app.py</code>, atau di Windows klik dua kali <code>${esc(p.runFile || "")}</code></li>
+            <li>Jalankan <code>${esc(p.runCmd || "streamlit run app.py")}</code>${p.runFile ? `, atau di Windows klik dua kali <code>${esc(p.runFile)}</code>` : ""}</li>
+            ${p.runNote ? `<li>${p.runNote}</li>` : ""}
           </ol>
         </details>` : "";
       const links = [
@@ -789,14 +795,19 @@ const CONFIG = {
       const b = e.target.closest("[data-zip]");
       if (!b) return;
       const key = b.dataset.zip, b64 = data[key];
-      if (!b64) return;
-      const bin = atob(b64), bytes = new Uint8Array(bin.length);
-      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-      const url = URL.createObjectURL(new Blob([bytes], { type: "application/zip" }));
-      const a = document.createElement("a");
-      a.href = url; a.download = key + ".zip";
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 5000);
+      if (b64) {
+        const bin = atob(b64), bytes = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        const url = URL.createObjectURL(new Blob([bytes], { type: "application/zip" }));
+        const a = document.createElement("a");
+        a.href = url; a.download = key + ".zip";
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+      } else {
+        const a = document.createElement("a");
+        a.href = key + ".zip"; a.download = key + ".zip";
+        document.body.appendChild(a); a.click(); a.remove();
+      }
     });
   }
 
