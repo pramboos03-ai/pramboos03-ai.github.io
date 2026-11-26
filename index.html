@@ -552,9 +552,13 @@ const CONFIG = {
       tags: ["Python", "Flask", "Machine Learning", "Telemedicine", "SQLite"],
       zip: "TeleDiabetes",
       zipSize: "840 KB",
-      runFile: "Jalankan_Aplikasi_TeleDiabetes.bat",
-      runCmd: "python app.py",
-      runNote: "Buka browser ke <code>http://127.0.0.1:5000</code>. Akun dokter bawaan: <code>dokter@demo.id</code> / <code>dokter123</code>.",
+      guide: [
+        "Pasang Python 3.10 atau lebih baru di komputermu.",
+        "Ekstrak file ZIP, lalu buka folder hasil ekstraknya di terminal / Command Prompt.",
+        "Jalankan <code>pip install -r requirements.txt</code> untuk memasang dependensi Flask dan Scikit-Learn.",
+        "Jalankan <code>python app.py</code>, atau di Windows cukup klik dua kali file <code>Jalankan_Aplikasi_TeleDiabetes.bat</code>.",
+        "Buka browser ke <code>http://127.0.0.1:5000</code>. Akun dokter bawaan: <code>dokter@demo.id</code> / <code>dokter123</code>."
+      ],
       demo: "https://pramboos.pythonanywhere.com",
       repo: "",
       image: ""
@@ -564,6 +568,13 @@ const CONFIG = {
       year: "2026",
       desc: "Aplikasi deteksi dini dan triase demam cerdas berbasis React, PWA, dan AI Clinical Decision Support dengan fitur konsultasi medis, pemantauan gejala bahaya, dan edukasi kesehatan.",
       tags: ["React", "TypeScript", "TailwindCSS", "PWA", "Triase Medis"],
+      zip: "waspada-demam",
+      zipSize: "2.3 MB",
+      guide: [
+        "Ekstrak file ZIP ke dalam folder di komputermu.",
+        "Buka file <code>index.html</code> langsung di browser (Google Chrome atau Microsoft Edge).",
+        "Aplikasi langsung berjalan lengkap sebagai Progressive Web App (PWA) tanpa perlu install Node.js ataupun web server lokal."
+      ],
       demo: "https://pramboos03-ai.github.io/waspada-demam/",
       repo: "",
       image: ""
@@ -573,6 +584,14 @@ const CONFIG = {
       year: "2026",
       desc: "Command Center Sistem Informasi Manajemen Dinas Kesehatan: Peta GIS Kewaspadaan Dini KLB / Wabah (EWARS/SKDR) dengan Google Maps Hybrid, monitoring 8 Puskesmas, pemantauan stunting balita, logistik farmasi GFK, serta SOP & Pedoman Klinis Kemenkes RI.",
       tags: ["PHP", "MySQL", "Leaflet GIS", "Google Maps", "Chart.js", "Bootstrap 5"],
+      zip: "simkes-dinkes",
+      zipSize: "65 KB",
+      guide: [
+        "Nyalakan <b>Apache</b> dan <b>MySQL</b> di aplikasi XAMPP.",
+        "Ekstrak file ZIP ke dalam folder <code>C:\\xampp\\htdocs\\simkes-dinkes</code>.",
+        "Buka <code>http://localhost/phpmyadmin/</code>, buat database bernama <code>simkes_dinkes</code>, lalu import file <code>php_version/database.sql</code>.",
+        "Buka browser ke <code>http://localhost/simkes-dinkes/php_version/dashboard.php</code> (atau buka <code>index.html</code> untuk menjalankan demo langsung)."
+      ],
       demo: "https://pramboos03-ai.github.io/simkes-dinkes/",
       repo: "https://github.com/pramboos03-ai/simkes-dinkes",
       image: ""
@@ -591,6 +610,14 @@ const CONFIG = {
       year: "2026",
       desc: "Sistem kasir, kurir, dan pelanggan Laundry modern berbasis PHP & MySQL dengan integrasi Payment Gateway Xendit (QRIS, E-Wallet, VA), WhatsApp OTP Fonnte, penjemputan berbasis Peta Leaflet, dan struk digital QR Tracking.",
       tags: ["PHP", "MySQL", "Leaflet GIS", "Xendit Payment", "WhatsApp API", "REST API"],
+      zip: "laundry-gen-z",
+      zipSize: "66 KB",
+      guide: [
+        "Nyalakan <b>Apache</b> dan <b>MySQL</b> di aplikasi XAMPP.",
+        "Ekstrak file ZIP ke dalam folder <code>C:\\xampp\\htdocs\\laundry-gen-z</code>.",
+        "Buka <code>http://localhost/laundry-gen-z/install.php</code> untuk membuat tabel database dan akun admin pertama secara otomatis.",
+        "Buka <code>http://localhost/laundry-gen-z/index.html</code> untuk mulai menggunakan sistem (atau buka <code>track.html</code> untuk lacak pesanan via QR)."
+      ],
       demo: "https://pramboos03-ai.github.io/laundry-gen-z/",
       repo: "https://github.com/pramboos03-ai/laundry-gen-z",
       image: ""
@@ -600,7 +627,14 @@ const CONFIG = {
       year: "2026",
       desc: "Sistem pakar skrining diabetes melitus yang menggabungkan Certainty Factor dan Naive Bayes, dibangun dengan Python dan Streamlit berdasarkan naskah penelitian Arafa Perawatan Luka Diabetes.",
       tags: ["Python", "Streamlit", "Certainty Factor", "Naive Bayes"],
-      zip: "DiaPakar", zipSize: "56 KB", runFile: "Jalankan_Aplikasi_CF.bat",
+      zip: "DiaPakar",
+      zipSize: "56 KB",
+      guide: [
+        "Pasang Python 3.10 atau lebih baru.",
+        "Ekstrak file ZIP, lalu di Windows cukup klik dua kali file <code>Jalankan_Aplikasi_CF.bat</code>.",
+        "Atau lewat terminal: jalankan <code>pip install -r requirements.txt</code> lalu <code>streamlit run app.py</code>.",
+        "Aplikasi sistem pakar Certainty Factor akan otomatis terbuka di browser."
+      ],
       demo: "",
       repo: "",
       image: ""
@@ -610,7 +644,14 @@ const CONFIG = {
       year: "2026",
       desc: "Implementasi klasifikasi enam penyakit paru dari 19 gejala klinis dengan Naive Bayes, mengikuti jurnal TEKINKOM 2022, lengkap dengan halaman data, proses perhitungan, dan riwayat klasifikasi.",
       tags: ["Python", "Streamlit", "Naive Bayes", "Data Mining"],
-      zip: "PulmoBayes", zipSize: "27 KB", runFile: "Jalankan_Aplikasi_NB.bat",
+      zip: "PulmoBayes",
+      zipSize: "27 KB",
+      guide: [
+        "Pasang Python 3.10 atau lebih baru.",
+        "Ekstrak file ZIP, lalu di Windows cukup klik dua kali file <code>Jalankan_Aplikasi_NB.bat</code>.",
+        "Atau lewat terminal: jalankan <code>pip install -r requirements.txt</code> lalu <code>streamlit run app.py</code>.",
+        "Aplikasi klasifikasi Naive Bayes akan otomatis terbuka di browser."
+      ],
       demo: "",
       repo: "",
       image: ""
@@ -662,16 +703,21 @@ const CONFIG = {
     const slides = $("#projectSlides");
     CONFIG.projects.forEach(p => {
       const thumbStyle = p.image ? ` style="background-image:url('${esc(p.image)}')"` : "";
-      const zipNote = p.zip ? `
-        <p class="pnote">File ZIP ini bisa diunduh dan langsung dipakai. Isinya kode sumber, data, dan panduan lengkap untuk menjalankan aplikasinya di komputermu.</p>
-        <details class="pguide">
-          <summary>Cara menjalankan</summary>
-          <ol>
+      const guideHtml = Array.isArray(p.guide) && p.guide.length
+        ? p.guide.map(g => `<li>${g}</li>`).join("")
+        : `
             <li>Pasang Python 3.10 atau lebih baru.</li>
             <li>Ekstrak file ZIP, lalu buka folder hasil ekstraknya di terminal.</li>
             <li>Jalankan <code>pip install -r requirements.txt</code></li>
             <li>Jalankan <code>${esc(p.runCmd || "streamlit run app.py")}</code>${p.runFile ? `, atau di Windows klik dua kali <code>${esc(p.runFile)}</code>` : ""}</li>
             ${p.runNote ? `<li>${p.runNote}</li>` : ""}
+          `;
+      const zipNote = p.zip ? `
+        <p class="pnote">File ZIP ini bisa diunduh dan langsung dipakai. Isinya kode sumber, data, dan panduan lengkap untuk memasang dan menjalankan aplikasinya di komputermu.</p>
+        <details class="pguide">
+          <summary>Cara memasang & menjalankan</summary>
+          <ol>
+            ${guideHtml}
           </ol>
         </details>` : "";
       const links = [
