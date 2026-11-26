@@ -320,9 +320,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
   .music{padding:.7rem .85rem}
   .contact>.bh-anchor{right:-12%;top:0}
 }
-@media (prefers-reduced-motion:reduce){
-  .marquee-row,.float,.float-2,.pulse,.scroll-cue i,.rays,.neb,.music.playing .eq i{animation:none}
-}
+/* @media (prefers-reduced-motion:reduce) dinonaktifkan agar animasi interaktif selalu aktif di semua PC/Laptop */
 </style>
 </head>
 
@@ -628,7 +626,8 @@ const CONFIG = {
 
   const $  = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Paksa reduce = false agar animasi galaksi, GSAP, kursor magnetik, dan marquee selalu aktif di semua PC/Laptop
+  const reduce = false;
   const fine   = matchMedia("(pointer: fine)").matches;
   const hasGSAP = typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined";
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
